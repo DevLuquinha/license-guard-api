@@ -14,6 +14,8 @@ public partial class Program
             app.MapOpenApi();
         }
 
+        app.MapGet("/api/", () => "The License Guard API is running.");
+
         app.UseHttpsRedirection();
         app.Run();
     }
