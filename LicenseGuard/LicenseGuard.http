@@ -1,6 +1,3 @@
 @LicenseGuard_HostAddress = http://localhost:5278
 
-GET {{LicenseGuard_HostAddress}}/weatherforecast/
-Accept: application/json
-
 ###
