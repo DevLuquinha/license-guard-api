@@ -5,6 +5,7 @@ public partial class Program
         var builder = WebApplication.CreateBuilder(args);
 
         builder.Services.AddOpenApi();
+        builder.Services.AddControllers();
 
         var app = builder.Build();
 
@@ -14,7 +15,9 @@ public partial class Program
             app.MapOpenApi();
         }
 
+        // The License Guard API root endpoint
         app.MapGet("/api/", () => "The License Guard API is running.");
+        app.MapControllers();
 
         app.UseHttpsRedirection();
         app.Run();
