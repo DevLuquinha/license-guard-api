@@ -20,8 +20,10 @@ It aims to support conscious architectural decisions for the LicenseGuard API an
 ## Clean Architecture Overview (Conceptual)
 (To be filled after study)
 
-- What Clean Architecture is
-- What problem it solves
+- What Clean Architecture is<br>
+`Clean Architecture has the main ideia: "The center of my software not is the database or framework, however the business rules."`
+- What problem it solves<br>
+`The clean architecture solves the dangerous coupling of the classic architecture (UI -> Business -> Data), if the database changed, will need to change the business layer. Helps decouple from frameworks, difficulties with tests and fragility.`
 - Why it is not about folders or frameworks
 - Difference between architecture and implementation
 
