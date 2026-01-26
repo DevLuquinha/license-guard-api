@@ -18,15 +18,15 @@ It aims to support conscious architectural decisions for the LicenseGuard API an
 ---
 
 ## Clean Architecture Overview (Conceptual)
-(To be filled after study)
 
 - What Clean Architecture is<br>
 `Clean Architecture has the main ideia: "The center of my software not is the database or framework, however the business rules."`
 - What problem it solves<br>
 `The clean architecture solves the dangerous coupling of the classic architecture (UI -> Business -> Data), if the database changed, will need to change the business layer. Helps decouple from frameworks, difficulties with tests and fragility.`
-- Why it is not about folders or frameworks
-- Difference between architecture and implementation
-
+- Why it is not about folders or frameworks<br>
+`Because it is about concepts and business logic, not just about folders structures or frameworks/features.`
+- Difference between architecture and implementation<br>
+`Architecture defines the high-level, intentional structure and rules of a system, while implementation is the concrete, technical execution of that design.`
 ---
 
 ## Layers in Clean Architecture
@@ -55,12 +55,13 @@ It aims to support conscious architectural decisions for the LicenseGuard API an
 ---
 
 ## Dependency Rule
-(To be filled after study)
 
-- Explanation of the dependency direction
-- Why dependencies always point inward
+- Explanation of the dependency direction<br>
+`The main rule about the Clean Architecture is the dependency rule. This rule say that source code dependencies can only point inward, the domain/entity layer.`
+- Why dependencies always point inward<br>
+`Because the high-layers can recieve changes, so if all of the dependencies always point inward, we can changes the external layers without change the domain/business rules, because they are in the center.`
 - Why the Domain must be the most stable layer
-
+`Because all of application depends of the Domain Layer. This means resistance to change.`
 
 ---
 
