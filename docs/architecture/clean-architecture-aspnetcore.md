@@ -33,9 +33,16 @@ It aims to support conscious architectural decisions for the LicenseGuard API an
 (To be filled after study)
 
 ### Domain Layer
-- What belongs here
-- What must NEVER be here
-- Why this layer has no dependencies
+- What belongs here<br>
+`1. Entities: Objects that has an ID and contains business logic example: License or Customer.`<br>
+`2.Value objects: Objects that has not an ID, only defined by their values example: LicenseKey, DateRange.`<br>
+`3. Repositories Interfaces: I contract type of says "I need to save a license".`
+- What must NEVER be here<br>
+`1. Entity Framework references or database frameworks`<br>
+`2. Nothing about ASP.NET Core like HttpContext, ControllerBase or ActionResult`<br>
+`3. Libraries, the domains need to be C# only.`
+- Why this layer has no dependencies<br>
+`Because this layer needs to be the "Point of the Truth", without dependencies, the unit tests are immediately solves.`
 
 ### Application Layer
 - Responsibilities of the application layer
